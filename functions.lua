@@ -129,15 +129,17 @@ minetest.register_globalstep (function(dtime)
 			p.candy = 0
 		end
 		if p.time > 0 then
-			player:set_physics_override({
-				speed = 2.5,
-			})
+            --commented to avoid bug behaviour against hbsprint
+		    --[[player:set_physics_override({
+			    speed = 2.5,
+		    })]]--
 		end
 		--minetest.chat_send_all(p.candy)
 		if p.time == 0 then
-			player:set_physics_override({
-				speed = 1,
-			})
+            --commented to avoid bug behaviour against hbsprint
+		    --[[player:set_physics_override({
+			    speed = 1,
+		    })]]--
 			if p.hud.ui then
 				player:hud_remove(p.hud.ui)
 			end
